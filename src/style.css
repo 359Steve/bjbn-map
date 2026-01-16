@@ -1,0 +1,20 @@
+.bjbn-map-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.bjbn-map-container .bjbn-map-container-box {
+	width: 100%;
+	height: 100%;
+}
+
+.bjbn-map-container .bjbn-map-container-select-box {
+	position: absolute;
+	z-index: 9999999;
+}
+
+.bjbn-map-container .bjbn-map-container-select {
+	width: 100%;
+	height: 100%;
+}
