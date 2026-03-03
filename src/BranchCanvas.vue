@@ -173,6 +173,26 @@ function start(ctx: CanvasRenderingContext2D, width: number, height: number) {
 
 onMounted(async () => {
 	nextTick(() => {
+		if (!document.getElementById('branch-canvas-style')) {
+			const style = document.createElement('style')
+			style.id = 'branch-canvas-style'
+			style.textContent = `
+				.branch-class {
+					pointer-events: none;
+					position: fixed;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: -1;
+				}
+				@media print {
+					.branch-class { display: none; }
+				}
+			`
+			document.head.appendChild(style)
+		}
+
 		size.value = useWindowSize();
 		const canvas = el.value!;
 		const ctx = initCanvas(canvas, size.value.width, size.value.height);
@@ -197,22 +217,3 @@ const mask = computed(() => 'radial-gradient(circle, transparent, black);');
 		<canvas ref="el" width="400" height="400" />
 	</div>
 </template>
-
-<style scoped>
-.branch-class {
-	pointer-events: none;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-}
-
-/* 打印时隐藏 */
-@media print {
-	.branch-class {
-		display: none;
-	}
-}
-</style>
