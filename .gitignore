@@ -1,0 +1,17 @@
+.DS_Store
+
+# Dependencies
+node_modules
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

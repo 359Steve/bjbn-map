@@ -1,29 +1,31 @@
 {
-	"name": "bjbn-map-container",
-	"version": "1.0.12",
-	"description": "bjbn-map-container",
-	"author": "huhai",
-	"main": "dist/bjbn-map-container.umd.js",
-	"module": "dist/bjbn-map-container.es.js",
+	"name": "branch-canvas",
+	"version": "1.0.1",
+	"description": "branch-canvas",
+	"author": "Josef-qiao",
+	"license": "MIT",
+	"main": "dist/branch-canvas.umd.js",
+	"module": "dist/branch-canvas.es.js",
 	"types": "dist/index.d.ts",
-	"style": "dist/bjbn-map-container.css",
-	"type": "module",
-	"scripts": {
-		"build": "vite build && tsc --emitDeclarationOnly"
-	},
+	"style": "dist/branch-canvas.css",
 	"files": [
 		"dist"
 	],
+	"scripts": {
+		"build": "vite build"
+	},
 	"keywords": [
-		"bjbn"
+		"branch",
+		"canvas",
+		"vue3"
 	],
-	"license": "MIT",
-	"dependencies": {
-		"element-plus": "^2.10.7",
-		"vue": "^3.5.18",
-		"vue-plugin-load-script": "^2.1.1"
+	"peerDependencies": {
+		"vue": "^3.3.0",
+		"@vueuse/core": "^14.0.0"
 	},
 	"devDependencies": {
+		"vue": "^3.5.18",
+		"@vueuse/core": "^14.2.1",
 		"@types/node": "^24.3.0",
 		"@vitejs/plugin-vue": "^6.0.1",
 		"@vitejs/plugin-vue-jsx": "^5.0.1",

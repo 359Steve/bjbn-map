@@ -1,6 +1,5 @@
 import './style.css'
-import MapContainer from './MapContainer'
-import type { MapConfigVo, MapObj } from './types'
+import BranchCanvas from './BranchCanvas.vue'
 
-export { MapContainer, MapConfigVo, MapObj }
-export default MapContainer
+export { BranchCanvas }
+export default BranchCanvas
