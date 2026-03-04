@@ -1,13 +1,13 @@
 {
-	"name": "branch-canvas",
-	"version": "1.0.2",
-	"description": "branch-canvas",
+	"name": "vp-loading-indicator",
+	"version": "1.0.0",
+	"description": "vp-loading-indicator",
 	"author": "Josef-qiao",
 	"license": "MIT",
-	"main": "dist/branch-canvas.umd.js",
-	"module": "dist/branch-canvas.es.js",
+	"main": "dist/vp-loading-indicator.umd.js",
+	"module": "dist/vp-loading-indicator.es.js",
 	"types": "dist/index.d.ts",
-	"style": "dist/branch-canvas.css",
+	"style": "dist/vp-loading-indicator.css",
 	"files": [
 		"dist"
 	],
@@ -15,16 +15,17 @@
 		"build": "vite build"
 	},
 	"keywords": [
-		"branch",
-		"canvas",
+		"indicator",
+		"loading",
+		"vitepress",
 		"vue3"
 	],
 	"peerDependencies": {
 		"vue": "^3.3.0",
-		"@vueuse/core": "^14.0.0"
+		"@vueuse/core": "^14.0.0",
+		"vitepress": "^1.6.0"
 	},
 	"devDependencies": {
-		"vue": "^3.5.18",
 		"@vueuse/core": "^14.2.1",
 		"@types/node": "^24.3.0",
 		"@vitejs/plugin-vue": "^6.0.1",

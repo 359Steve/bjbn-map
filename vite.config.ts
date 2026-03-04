@@ -8,17 +8,21 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		vueJsx(),
-		dts({ insertTypesEntry: true })
+		dts({
+		insertTypesEntry: true,
+		include: ['src/**/*.ts', 'src/**/*.vue', 'src/types/**/*.d.ts'],
+		outDir: 'dist',
+	})
 	],
 	build: {
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.tsx'),
-			name: 'BranchCanvas',
+			entry: path.resolve(__dirname, 'src/index.ts'),
+			name: 'VPLoadingIndicator',
 			formats: ['es', 'umd'],
-			fileName: (format) => `branch-canvas.${format}.js`
+			fileName: (format) => `vp-loading-indicator.${format}.js`
 		},
 		rollupOptions: {
-			external: ['vue'],
+			external: ['vue', 'vitepress'],
 			output: {
 				globals: {
 					vue: 'Vue'
